@@ -44,11 +44,11 @@ return htmltemplate;
 
 
 app.get('/', function (req, res) {
-  res.send(creatingtemplate(infopainting));
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/painting', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'painting.html'));
+  res.send(creatingtemplate(infopainting));
 });
 
 app.get('/drawing', function (req, res) {
