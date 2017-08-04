@@ -40,10 +40,10 @@ var htmltemplate= `
     </title>
     <link href="/ui/style.css" rel="stylesheet" />
     </head>
-<body>
+ <body>
     <a href='/'>Back to home</a>
     ${content}
-</body>
+ </body>
 
 </html>
 ` ;
