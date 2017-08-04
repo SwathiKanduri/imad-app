@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/painting', function (req, res) {
-  res.send("this is painting page content");
+  res.sendFile(path.join(__dirname, 'ui', 'painting.html'));
 });
 
 app.get('/drawing', function (req, res) {
