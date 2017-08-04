@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var infos= {
+/* var infos= {
 infopainting: {
     title:Painting,
        content: ` <p align="left" > <font class=pinfo>
@@ -50,14 +50,15 @@ var htmltemplate= `
 return htmltemplate;
 }
 
-
+*/
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/painting', function (req, res) {
-  res.send(creatingtemplate(infopainting));
+ // res.send(creatingtemplate(infopainting));
+ res.sendFile(path.join(__dirname, 'ui', 'painting.html'));
 });
 
 app.get('/drawing', function (req, res) {
