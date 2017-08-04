@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 
  var infopainting= {
 // infopainting: {
-    title:Painting,
+    title:'Painting',
        content: ` <p align="left" > <font class=pinfo>
                 Pablo Picasso rightly said that every child is a born artist, the problem is to retain that artist within themselves. This universe is full of art and inspiration, that is what everyone can see, but it takes a really talented and visionary artist to pick paint and brush and illustrate their thoughts, visions and this beautiful universe into paintings. 
             </font>
@@ -18,15 +18,13 @@ app.use(morgan('combined'));
 };
 
 var infodrawing= {
-    title:Drawing ,
+    title:'Drawing' ,
        content: ` <p align="center"> <font class=dinfo> Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional.Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium
-Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional
-Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional
+            Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional
+            Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional
 
 </font>
 </p> `
-
-
 };
 
 function creatingtemplate(data)
