@@ -14,7 +14,7 @@ app.get('/painting', function (req, res) {
 });
 
 app.get('/drawing', function (req, res) {
-  res.send("drawing page content is this");
+  res.sendFile(path.join(__dirname, 'ui', 'drawing.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
