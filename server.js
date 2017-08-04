@@ -6,16 +6,18 @@ var app = express();
 app.use(morgan('combined'));
 
 
-/* var infos= {
-infopainting: {
+ var infopainting= {
+// infopainting: {
     title:Painting,
        content: ` <p align="left" > <font class=pinfo>
                 Pablo Picasso rightly said that every child is a born artist, the problem is to retain that artist within themselves. This universe is full of art and inspiration, that is what everyone can see, but it takes a really talented and visionary artist to pick paint and brush and illustrate their thoughts, visions and this beautiful universe into paintings. 
             </font>
              </p> `
-}, 
+// }, 
 
-infodrawing: {
+};
+
+var infodrawing= {
     title:Drawing ,
        content: ` <p align="center"> <font class=dinfo> Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional.Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium
 Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional
@@ -23,7 +25,7 @@ Drawing is a form of visual art in which a person uses various drawing instrumen
 
 </font>
 </p> `
-}
+
 
 };
 
@@ -50,15 +52,15 @@ var htmltemplate= `
 return htmltemplate;
 }
 
-*/
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/painting', function (req, res) {
- // res.send(creatingtemplate(infopainting));
- res.sendFile(path.join(__dirname, 'ui', 'painting.html'));
+  res.send(creatingtemplate(infopainting));
+ // res.sendFile(path.join(__dirname, 'ui', 'painting.html'));
 });
 
 app.get('/drawing', function (req, res) {
