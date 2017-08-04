@@ -31,6 +31,7 @@ body {
 
 .pinfo {
     font-family: sans-serif;
+    background-color: lightyellow;
     color: pink;
     margin-top: 75px;
     height: 200px;
