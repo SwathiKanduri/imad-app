@@ -5,8 +5,46 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var infopainting={
+    title:Painting,
+       content: ` <p align="left" > <font class=pinfo>
+                Pablo Picasso rightly said that every child is a born artist, the problem is to retain that artist within themselves. This universe is full of art and inspiration, that is what everyone can see, but it takes a really talented and visionary artist to pick paint and brush and illustrate their thoughts, visions and this beautiful universe into paintings. 
+            </font>
+             </p> `
+             
+    
+};
+
+function creatingtemplate(data)
+{
+
+var title=data.title;
+var content=data.content;
+var htmltemplate= `
+
+<html> 
+    <head> 
+        <title>
+         ${title}
+    </title>
+    <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+<body>
+    <a href='/'>Back to home</a>
+    ${content}
+</body>
+
+</html>
+
+` ;
+return htmltemplate;
+
+}
+
+
+
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.send(creatingtemplate(infopainting));
 });
 
 app.get('/painting', function (req, res) {
