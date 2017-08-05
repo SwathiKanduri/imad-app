@@ -14,12 +14,8 @@ function moveright(){
 }
 
 move.onclick=function (){
-    do{
-        moveright();
-        
-    }while (move.onclick=='true');
-    
-   // var interval=setInterval(moveright,50);
+  
+    var interval=setInterval(moveright,50);
    
     };
     
