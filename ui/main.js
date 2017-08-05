@@ -6,7 +6,7 @@ var move=document.getElementById("image");
 
 var marginleft=10;
 function moveright(){
-    marginleft=marginleft+10;
+    marginleft=marginleft+1;
     move.style.marginLeft=marginleft+ 'px';
 }
 
