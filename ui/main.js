@@ -11,10 +11,11 @@ function moveright(){
 }
 
 move.onclick=function (){
-    var interval=setInterval(moveright,50);
-    move.onclick=function(){
-        
+     move.onclick=function(){
+
     };
+    var interval=setInterval(moveright,50);
+   
     };
     
     
