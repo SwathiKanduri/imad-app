@@ -5,6 +5,10 @@ element.innerHTML='Changed value using JS';
 var move=document.getElementById("image");
 
 move.onclick=function (){
+     if(move.onclick=='true')
+    {
+        return;
+    }
     
     var interval=setInterval(moveright,50);
    
@@ -13,10 +17,7 @@ move.onclick=function (){
 
 var marginleft=10;
 function moveright(){
-    if(move.onclick=='true')
-    {
-        return;
-    }
+   
 
     marginleft=marginleft+1;
     move.style.marginLeft=marginleft+ 'px';
