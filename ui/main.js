@@ -12,19 +12,11 @@ function moveright(){
     move.style.marginLeft=marginleft+ 'px';
 }
 
-move.onclick=start();
-function start (){
+move.onclick=function (){
    
             var interval=setInterval(moveright,50);
-            if(move.onclick=='true'){
-               stop();
-           }
  
-    }
+    };
     
-   function stop(){
-       window.location.reload();
-        
-    }
-    
+  
     
