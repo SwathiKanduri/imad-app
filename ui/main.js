@@ -14,11 +14,10 @@ function moveright(){
 
 move.onclick=function (){
    
-  var interval=setInterval(moveright,50);
-   if(move.onclick=='true')
-    {
-        return;
-    }
+  // var interval=setInterval(moveright,50);
+   do{
+       moveright();
+   }while(move.onclick=='false')
    
     };
     
