@@ -6,9 +6,11 @@ var move=document.getElementById("image");
 
 var marginleft=10;
 function moveright(){
-     move.onclick=function(){
+    if(move.onclick=='true')
+    {
+        return;
+    }
 
-    };
     marginleft=marginleft+1;
     move.style.marginLeft=marginleft+ 'px';
 }
