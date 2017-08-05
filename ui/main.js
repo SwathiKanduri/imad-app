@@ -13,12 +13,12 @@ function moveright(){
 }
 
 move.onclick=function (){
-    if(move.onclick=='true')
+   
+  var interval=setInterval(moveright,50);
+   if(move.onclick=='true')
     {
         return;
     }
-  
-    var interval=setInterval(moveright,50);
    
     };
     
