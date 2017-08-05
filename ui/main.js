@@ -4,16 +4,6 @@ var element=document.getElementById("main_text");
 element.innerHTML='Changed value using JS';
 var move=document.getElementById("image");
 
-move.onclick=function (){
-     if(move.onclick=='true')
-    {
-        return;
-    }
-    
-    var interval=setInterval(moveright,50);
-   
-    };
-    
 
 var marginleft=10;
 function moveright(){
@@ -23,5 +13,17 @@ function moveright(){
     move.style.marginLeft=marginleft+ 'px';
 }
 
-
+move.onclick=function (){
+     if(move.onclick=='true')
+    {
+        return;
+    }
+    else{
+    moveright();
+    }
+    
+   // var interval=setInterval(moveright,50);
+   
+    };
+    
     
