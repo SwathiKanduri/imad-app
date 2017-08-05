@@ -6,14 +6,15 @@ var move=document.getElementById("image");
 
 var marginleft=10;
 function moveright(){
+     move.onclick=function(){
+
+    };
     marginleft=marginleft+1;
     move.style.marginLeft=marginleft+ 'px';
 }
 
 move.onclick=function (){
-     move.onclick=function(){
-
-    };
+    
     var interval=setInterval(moveright,50);
    
     };
