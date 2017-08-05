@@ -17,7 +17,7 @@ move.onclick=function (){
   // var interval=setInterval(moveright,50);
    do{
        moveright();
-   }while(move.onclick=='false')
+   }while(move.onclick=='true')
    
     };
     
