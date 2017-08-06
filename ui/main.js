@@ -89,8 +89,9 @@ var inputdrw=inpdraw.value;
     for(var i=0;i<names.length;i++){
         list+='<li>'+names[i]+'</li>';
     } */
+    comments+=inputdrw;
     var division=document.getElementById('spndrw');
-   division.innerHTML=inputdrw;
+   division.innerHTML=comments;
   
                
            }
