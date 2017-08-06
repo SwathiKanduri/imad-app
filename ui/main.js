@@ -91,6 +91,7 @@ var inputdrw=inpdraw.value;
     } */
     var division=document.getElementById('spndrw');
    division.innerHTML=inputdrw;
+   res.send(inputdrw);
                
            }
        } 
