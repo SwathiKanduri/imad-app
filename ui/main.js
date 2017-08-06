@@ -89,7 +89,7 @@ var inputdrw=inpdraw.value;
     for(var i=0;i<names.length;i++){
         list+='<li>'+names[i]+'</li>';
     } */
-    var division=document.getElementById('divdrw');
+    var division=document.getElementById('spndrw');
    division.innerHTML=comments;
                
            }
