@@ -23,6 +23,7 @@ app.use(morgan('combined'));
 
 </font>
 </p> `
+
 }
 
 };
@@ -67,6 +68,12 @@ app.get('/submit-name', function (req, res) {
 });
 
 
+app.get('/drawing', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'drawing.html'));
+});
+
+
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -83,14 +90,14 @@ app.get('/', function (req, res) {
   res.send(creatingtemplate(infodrawing));
 });
 
-*/
+
 
 app.get('/:artName', function (req, res) {
     var artName=req.params.artName;
   res.send(creatingtemplate(infos[artName]));
 });
 
-
+*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
