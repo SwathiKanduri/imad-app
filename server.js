@@ -68,11 +68,11 @@ app.get('/submit-name', function (req, res) {
 });
 
 
-app.get('/drawing/submitdrw', function (req, res) {
+/* app.get('/drawing/submitdrw', function (req, res) {
   var text=element.getAttribute(inpdraw);
   res.send(text);
   
-}); 
+}); */
 
 
 app.get('/drawing', function (req, res) {
