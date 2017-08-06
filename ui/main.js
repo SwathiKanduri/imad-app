@@ -90,7 +90,7 @@ var inputdrw=inpdraw.value;
         list+='<li>'+names[i]+'</li>';
     } */
     var division=document.getElementById('spndrw');
-   division.innerHTML=comments;
+   division.innerHTML=inputdrw;
   
                
            }
