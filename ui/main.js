@@ -82,7 +82,7 @@ var inputdrw=inpdraw.value;
     request.onreadystatechange=function(){
        if(request.readyState===XMLHttpRequest.DONE){
            if(request.status===200){
-               
+              var comments= request.responseText;
           /*     var names=request.responseText;
                names=JSON.parse(names);
     var list='';
@@ -90,7 +90,7 @@ var inputdrw=inpdraw.value;
         list+='<li>'+names[i]+'</li>';
     } */
     var division=document.getElementById('divdrw');
-   division.innerHTML=inputdrw;
+   division.innerHTML=comments;
                
            }
        } 
