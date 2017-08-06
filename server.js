@@ -60,6 +60,12 @@ app.get('/counter', function (req, res) {
 });
 
 
+app.get('/drawing', function (req, res) {
+     res.send(division);
+});
+
+
+
 var names=[];
 app.get('/submit-name', function (req, res) {
   var name=req.query.name;
