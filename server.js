@@ -60,12 +60,6 @@ app.get('/counter', function (req, res) {
 });
 
 
-app.get('/drawing', function (req, res) {
-     res.send(division);
-});
-
-
-
 var names=[];
 app.get('/submit-name', function (req, res) {
   var name=req.query.name;
@@ -74,9 +68,15 @@ app.get('/submit-name', function (req, res) {
 });
 
 
-app.get('/drawing', function (req, res) {
-  res.send(division);
+app.get('/drawing/submitdrw', function (req, res) {
+  var text=req.query.inputdrw;
+  res.send(text);
   
+}); 
+
+
+app.get('/drawing', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'drawing.html'));
 });
 
 
