@@ -73,7 +73,7 @@ app.get('/', function (req, res) {
 });
 
 
-/*
+
 app.get('/painting', function (req, res) {
   res.send(creatingtemplate(infopainting));
  // res.sendFile(path.join(__dirname, 'ui', 'painting.html'));
@@ -83,7 +83,7 @@ app.get('/drawing', function (req, res) {
   res.send(creatingtemplate(infodrawing));
 });
 
-*/
+
 
 app.get('/:artName', function (req, res) {
     var artName=req.params.artName;
