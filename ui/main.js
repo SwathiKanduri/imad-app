@@ -90,8 +90,8 @@ var inputdrw=inpdraw.value;
         list+='<li>'+names[i]+'</li>';
     } */
     var division=document.getElementById('spndrw');
-   division.innerHTML=inputdrw;
-   res.send(inputdrw);
+   division.innerHTML=comments;
+  
                
            }
        } 
