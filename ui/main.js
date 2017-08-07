@@ -85,7 +85,7 @@ var inputdrw=inpdraw.value;
        if(request.readyState===XMLHttpRequest.DONE){
            if(request.status===200){
             var comments= request.responseText;
-               // comments=inputdrw;
+                comments=inputdrw;
     var division=document.getElementById('spndrw');
     division.innerHTML=comments;
   
@@ -96,7 +96,7 @@ var inputdrw=inpdraw.value;
     
     };
     
-    request.open('GET','http://swathikandooree.imad.hasura-app.io/drawing/submitdrw',true);
+    request.open('GET','http://swathikandooree.imad.hasura-app.io/drawing/',true);
     request.send(null);
     
 };
