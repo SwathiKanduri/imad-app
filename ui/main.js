@@ -87,7 +87,7 @@ var inputdrw=inpdraw.value;
           
    var comments=inputdrw;
     var division=document.getElementById('spndrw');
-   division.innerHTML=comments;
+ //  division.innerHTML=comments;
   
                
            }
