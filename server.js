@@ -60,13 +60,13 @@ app.get('/counter', function (req, res) {
 });
 
 
-var names=[];
+/*var names=[];
 app.get('/submit-name', function (req, res) {
   var name=req.query.name;
   names.push(name);
   res.send(JSON.stringify(names));
 });
-
+*/
  var comments='';
  app.get('/drawing/submitdrw-inputdrw', function (req, res) {
   var inputdrw=req.query.inputdrw;
