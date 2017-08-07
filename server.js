@@ -68,10 +68,8 @@ app.get('/submit-name', function (req, res) {
 });
 
  var comments=[];
- app.get('/drawing', function (req, res) {
-  var inputdrw=req.query.inputdrw;
-  comments.push(inputdrw);
-  res.send(JSON.stringify(comments));
+ app.get('/drawing/submitdrw', function (req, res) {
+  res.send(comments);
   
 });  
 
