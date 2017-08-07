@@ -75,9 +75,9 @@ app.get('/submit-name', function (req, res) {
 }); 
 
 
-/* app.get('/drawing', function (req, res) {
+app.get('/drawing', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'drawing.html'));
-}); */
+}); 
 
 
 
