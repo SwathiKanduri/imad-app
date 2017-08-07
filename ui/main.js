@@ -85,7 +85,7 @@ var inputdrw=inpdraw.value;
            if(request.status===200){
               var comments= request.responseText;
           
-    comments=inputdrw;
+    inputdrw+=comments;
     var division=document.getElementById('spndrw');
    division.innerHTML=comments;
   
