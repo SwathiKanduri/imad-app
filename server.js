@@ -70,8 +70,7 @@ app.get('/submit-name', function (req, res) {
 
  app.get('/drawing/submitdrw-inputdrw', function (req, res) {
   var inputdrw=req.query.inputdrw;
-  
-  res.send(comments);
+   res.send(comments);
   
 }); 
 
