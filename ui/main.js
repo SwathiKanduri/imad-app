@@ -1,3 +1,5 @@
+/*
+
 var button=document.getElementById("counter");
 
 
@@ -64,7 +66,7 @@ var name=nameInput.value;
 };
 
 
-
+*/
 
 //submit button code for drawing page
 
