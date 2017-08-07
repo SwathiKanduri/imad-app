@@ -67,7 +67,7 @@ app.get('/submit-name', function (req, res) {
   res.send(JSON.stringify(names));
 });
 
- var comments='';
+// var comments='';
  app.get('/drawing/submitdrw', function (req, res) {
   res.send(comments);
   
