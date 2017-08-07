@@ -95,7 +95,7 @@ var inputdrw=inpdraw.value;
     
     };
     
-    request.open('GET','http://swathikandooree.imad.hasura-app.io/submitdrw-comments?comments',true);
+    request.open('GET','http://swathikandooree.imad.hasura-app.io/submitdrw-inputdrw?inputdrw='+inputdrw,true);
     request.send(null);
     
 };
