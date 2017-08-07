@@ -67,17 +67,17 @@ app.get('/submit-name', function (req, res) {
   res.send(JSON.stringify(names));
 });
 
-/* var comments='';
+ var comments='';
  app.get('/drawing/submitdrw-inputdrw', function (req, res) {
   var inputdrw=req.query.inputdrw;
    res.send(comments);
   
-}); */
+}); 
 
 
-app.get('/drawing', function (req, res) {
+/* app.get('/drawing', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'drawing.html'));
-});
+}); */
 
 
 
