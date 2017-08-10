@@ -6,18 +6,18 @@ var app = express();
 app.use(morgan('combined'));
 
 
- var infos={
- 'painting' : {
-    title:'Painting',
+ var content={
+ 'article-one' : {
+    title:'Article-one',
        content: ` <p align="left" > <font class=pinfo>
-                Pablo Picasso rightly said that every child is a born artist, the problem is to retain that artist within themselves. This universe is full of art and inspiration, that is what everyone can see, but it takes a really talented and visionary artist to pick paint and brush and illustrate their thoughts, visions and this beautiful universe into paintings. 
+               ARTICLE ONE Pablo Picasso rightly said that every child is a born artist, the problem is to retain that artist within themselves. This universe is full of art and inspiration, that is what everyone can see, but it takes a really talented and visionary artist to pick paint and brush and illustrate their thoughts, visions and this beautiful universe into paintings. 
             </font>
              </p> `
 },
 
- 'drawing' :{
-    title:'Drawing' ,
-       content: ` <p align="center"> <font class=dinfo> Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional.Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium
+ 'article-two' :{
+    title:'Article-two' ,
+       content: ` <p align="center"> <font class=dinfo> ARTICLE TWO Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional.Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium
             Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional
             Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional
 
@@ -60,14 +60,14 @@ app.get('/counter', function (req, res) {
 });
 
 
-var names=[];
+/* var names=[];
 app.get('/submit-name', function (req, res) {
   var name=req.query.name;
   names.push(name);
   res.send(JSON.stringify(names));
-});
+}); */
 
-var comments='';
+/* var comments='';
  app.get('/drawing/submitdrw', function (req, res) {
   res.send(comments);
 });  
@@ -77,7 +77,7 @@ var comments='';
 }); 
 
 
-
+*/
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -94,14 +94,14 @@ app.get('/', function (req, res) {
   res.send(creatingtemplate(infodrawing));
 });
 
-
+*/
 
 app.get('/:artName', function (req, res) {
     var artName=req.params.artName;
   res.send(creatingtemplate(infos[artName]));
 });
 
-*/
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
