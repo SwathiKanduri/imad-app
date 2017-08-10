@@ -9,7 +9,7 @@ app.use(morgan('combined'));
  var content={
  'article-one' : {
     title:'Article-one',
-       content: ` <p align="left" > <font class=pinfo>
+       content: ` <p align="left" > <font class=art1info>
                ARTICLE ONE Pablo Picasso rightly said that every child is a born artist, the problem is to retain that artist within themselves. This universe is full of art and inspiration, that is what everyone can see, but it takes a really talented and visionary artist to pick paint and brush and illustrate their thoughts, visions and this beautiful universe into paintings. 
             </font>
              </p> `
@@ -17,7 +17,7 @@ app.use(morgan('combined'));
 
  'article-two' :{
     title:'Article-two' ,
-       content: ` <p align="center"> <font class=dinfo> ARTICLE TWO Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional.Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium
+       content: ` <p align="center"> <font class=art2info> ARTICLE TWO Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional.Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional medium
             Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional
             Drawing is a form of visual art in which a person uses various drawing instruments to mark paper or another two-dimensional
 
