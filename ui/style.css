@@ -20,7 +20,7 @@ body {
     height: 200px;
 }
 
-.dinfo {
+.art2info {
     height: 200px;
     font-family: sans-serif;
     color: blue;
@@ -29,7 +29,7 @@ body {
     
 }
 
-.pinfo {
+.art1info {
     font-family: sans-serif;
     color: green;
     margin-top: 75px;
