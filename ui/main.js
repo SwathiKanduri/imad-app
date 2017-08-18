@@ -72,6 +72,7 @@ var name=nameInput.value;
 //submit button code for drawing page
 
 
+
 var submitdrw=document.getElementById('submit_drw');
 submitdrw.onclick=function(){
     
