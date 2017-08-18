@@ -2,6 +2,8 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
+var crypto=require('crypto');
+
 var config= {
     user:'swathikandooree',
     database:'swathikandooree',
@@ -60,6 +62,21 @@ var htmltemplate= `
 ` ;
 return htmltemplate;
 }
+
+
+function hash(input,salt)
+{
+    //to create a hash, use cryto and below pre defined method
+    var hashed=crypto.pbkdf2Sync(input,salt,10000,512, 'sha512');
+    return hash.toString('hex');
+}
+
+app.get('/hash/:input',function(req,res){
+   var hashedString=hash(req.params.input,'this is a radom string as salt value');
+   res.send(hashedString);
+    
+});
+
 
 
 var pool=new Pool(config);
