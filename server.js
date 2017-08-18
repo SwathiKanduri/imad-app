@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
 var crypto=require('crypto');
+var bodyParser=require('body-parser');
 
 var config= {
     user:'swathikandooree',
@@ -14,6 +15,7 @@ var config= {
 
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 
 
 /* var content={
@@ -74,6 +76,26 @@ function hash(input,salt)
 app.get('/hash/:input',function(req,res){
    var hashedString=hash(req.params.input,'this is a radom string as salt value');
    res.send(hashedString);
+    
+});
+
+
+app.post('/create-user',function(req,res){
+   // code to add uesrname, hashed pwd to database
+   var username=req.body.username;
+   var password=req.body.password;
+   var salt=crypto.getRandomBytes(128).toString('hex');
+   var dbString=hash(password,salt);
+   pool.query('insert into "user" (username,password) values($1,$2)', function(req,res){
+       if(err){
+          res.status(500).send(err.toString());
+      } else{
+          res.send('user successfully created'+username);
+      }
+   });
+      
+   
+   
     
 });
 
