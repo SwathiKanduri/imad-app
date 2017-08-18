@@ -80,7 +80,7 @@ app.get('/test-db', function(req,res) {
 app.get('/articles/:articleName', function (req, res) {
   
   //  var articleName=req.params.articleName; '; delete from "article" where 'a'='a ---> eg,. for if user add this instead of a string
-    pool.query("select * from article where title= '" +req.params.articleName+ "'",function(err,result){
+    pool.query("select * from article where title= $1" , [req.params.articleName],function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
