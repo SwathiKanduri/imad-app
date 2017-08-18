@@ -14,7 +14,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
- var content={
+/* var content={
  'article-one' : {
     title:'Article-one',
     date : 'Aug 13 2017' ,
@@ -36,7 +36,7 @@ app.use(morgan('combined'));
 
 }
 
-};
+};  */
 
 function creatingtemplate(data)
 {
