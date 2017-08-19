@@ -143,7 +143,9 @@ app.post('/login',function(req,res){
 app.get('/check-login',function(req,res){
    
     if(req.session && req.session.auth && req.session.auth.userId){
-        req.send('you are logged in. session id :'+req.session.auth.userId.toString());
+        req.send('you are logged in. session id :' + req.session.auth.userId.toString());
+    } else{
+        req.send('you are not logged in ! ');
     }
     
 });
