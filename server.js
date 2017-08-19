@@ -4,6 +4,7 @@ var path = require('path');
 var Pool=require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
+var session=require('express-session');
 
 var config= {
     user:'swathikandooree',
@@ -16,6 +17,11 @@ var config= {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret:'somerandomsecretvalue',
+    cookie:{ maxAge: 1000*60*60*24*30}
+        
+    }));
 
 
 /* var content={
@@ -114,6 +120,13 @@ app.post('/login',function(req,res){
                 var salt=dbString.split('$')[2];
                 var hashedPassword=hash(password,salt); // creating a hash, based on submitted password and original salt (salt extracted                                                                                   // from pwd string stored in the db)
                 if(hashedPassword===dbString){
+                    //set session
+                    
+                    req.session.auth= {userId:result.rows[0].id};
+                    //sets a cookie with a session id that is randomly genereated
+                    //internally on server side, maps the session id to a object
+                    // {auth : {userId}}
+                    
                     res.send('your entered credentials are correct! ');
                 }
                 else{
@@ -124,6 +137,15 @@ app.post('/login',function(req,res){
       }
    }); 
   
+});
+
+
+app.get('/check-login',function(req,res){
+   
+    if(req.session && req.session.auth && req.session.userId){
+        req.send('you are logged in. session id :'+req.session.auth.userId.toString());
+    }
+    
 });
 
 
