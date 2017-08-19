@@ -93,11 +93,40 @@ app.post('/create-user',function(req,res){
           res.send('user successfully created: '+username);
       }
    });
-      
-   
-   
-    
 });
+
+
+app.post('/login',function(req,res){
+   
+  var username=req.body.username;
+   var password=req.body.password;
+   
+   pool.query('SELECT * FROM "user" WHERER username=$1',[username], function(err,result){
+       if(err){
+          res.status(500).send(err.toString());
+      } else{
+          if(result.rows.length===0){
+                res.status(403).send("no such username/password found");
+            }
+            else{
+                //match password
+                var dbString=result.rows[0].password;
+                var salt=dbString.split('$')[2];
+                var hashedPassword=hash(password,salt); // creating a hash, based on submitted password and original salt (salt extracted                                                                                   // from pwd string stored in the db)
+                if(hashedPassword===dbString){
+                    res.send('your entered credentials are correct! ');
+                }
+                else{
+                    res.status(403).send(" username/password invalid");
+                }
+                
+            }
+      }
+   }); 
+  
+});
+
+
 
 
 
