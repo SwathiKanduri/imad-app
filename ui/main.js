@@ -3,9 +3,7 @@
 
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
-    
-    
-    
+
      var request=new XMLHttpRequest();
     
     
@@ -15,9 +13,10 @@ submit.onclick=function(){
            
            if(request.status===200){
              console.log('user logged in ! ');
+             alert('Logged in successfully !');
            } 
            else if (request.status===403){
-               alert('username/password in correct');
+               alert('username/password incorrect');
            }  
            else if (request.status===500){
                alert('something went wrong on server side');
