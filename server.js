@@ -213,6 +213,7 @@ app.get('/submit-name', function (req, res) {
 
  var comments='';
  app.get('/drawing/submitdrw', function (req, res) {
+  comments=req.query.inputdrw;
   res.send(comments);
 });  
 
