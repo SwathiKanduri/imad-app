@@ -153,7 +153,7 @@ var inputdrw=inpdraw.value;
              
     var division=document.getElementById('spndrw');
     division.innerHTML=comments;
-    comments=comments+' '+inputdrw;
+   // comments=comments+' '+inputdrw;
                
            }
        } 
