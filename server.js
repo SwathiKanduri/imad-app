@@ -120,13 +120,14 @@ app.post('/login',function(req,res){
                 var salt=dbString.split('$')[2];
                 var hashedPassword=hash(password,salt); // creating a hash, based on submitted password and original salt (salt extracted                                                                                   // from pwd string stored in the db)
                 if(hashedPassword===dbString){
+                   
                     //set session
                     
                     req.session.auth= {userId:result.rows[0].id};
                     //sets a cookie with a session id that is randomly genereated
                     //internally on server side, maps the session id to a object
                     // {auth : {userId}}
-                    
+                    if(device==android)
                     res.send('your entered credentials are correct! ');
                 }
                 else{
