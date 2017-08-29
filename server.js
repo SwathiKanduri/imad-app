@@ -127,7 +127,7 @@ app.post('/login',function(req,res){
                     //sets a cookie with a session id that is randomly genereated
                     //internally on server side, maps the session id to a object
                     // {auth : {userId}}
-                    if(device==android)
+                   
                     res.send('your entered credentials are correct! ');
                 }
                 else{
