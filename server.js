@@ -120,7 +120,6 @@ app.post('/login',function(req,res){
                 var salt=dbString.split('$')[2];
                 var hashedPassword=hash(password,salt); // creating a hash, based on submitted password and original salt (salt extracted                                                                                   // from pwd string stored in the db)
                 if(hashedPassword===dbString){
-                   
                     //set session
                     
                     req.session.auth= {userId:result.rows[0].id};
