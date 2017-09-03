@@ -1,7 +1,7 @@
 //submit button code for username/pwd to login 
 
 
-
+/*
 
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
@@ -43,7 +43,7 @@ submit.onclick=function(){
 
 
 
-
+*/
 
 
 
